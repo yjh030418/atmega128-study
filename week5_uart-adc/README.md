@@ -13,6 +13,12 @@ USART1로 PC(PuTTY)와 문자를 주고받고, ADC로 읽은 가변저항 값을
 | `adc_putty.c` | 가변저항 값(0~1023)을 1초마다 PuTTY에 출력 |
 | `adc_motor_speed.c` | 가변저항으로 DC 모터 속도 제어 (ADC 10-bit → PWM 8-bit) |
 
+## 작동 영상
+
+| UART 에코 | ADC 값 출력 | ADC로 모터 속도 제어 |
+| --- | --- | --- |
+| <img src="uart_echo.gif" width="240"> | <img src="adc_putty.gif" width="240"> | <img src="adc_motor_speed.gif" width="240"> |
+
 ## UART 설정
 
 - 비동기식이라 양쪽 보율을 맞춰야 합니다. 9600 bps, 2배속 모드(`U2X1`)에서 `UBRR1 = 16 MHz / (8 × 9600) − 1 ≈ 207`입니다.
