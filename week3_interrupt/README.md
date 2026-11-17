@@ -10,6 +10,12 @@ PORTE 4번 핀(INT4)에 누름 스위치를 달고, 버튼 입력을 폴링이 �
 | `int_hold.c` | 버튼을 누르고 있는 동안만 LED 켜기 | LOW 레벨 |
 | `int_led_stack.c` | 버튼을 누를 때마다 LED가 하나씩 떨어져 쌓임, 8개가 차면 초기화 | 하강 엣지 |
 
+## 작동 영상
+
+| 토글 | 홀드 | LED 쌓기 |
+| --- | --- | --- |
+| <img src="int_toggle.gif" width="240"> | <img src="int_hold.gif" width="240"> | <img src="int_led_stack.gif" width="240"> |
+
 ## 핵심
 
 - **내부 풀업**: `DDRE = 0x00; PORTE = (1 << 4);`로 외부 저항 없이 스위치를 연결했습니다. 그래서 눌렸을 때 핀 값이 0입니다.
