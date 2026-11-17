@@ -10,6 +10,12 @@ ATmega128 기본 회로를 직접 납땜하고, PORTC에 연결된 LED 8개를 �
 | `led_one_by_one.c` | LED를 0번부터 7번까지 하나씩 순서대로 점등 |
 | `led_stack.c` | LED가 위에서 떨어져 한 칸씩 쌓이는 애니메이션 (정방향 → 역방향) |
 
+## 작동 영상
+
+| 교차 점등 | 순차 점등 | LED 쌓기 |
+| --- | --- | --- |
+| <img src="led_alternate.gif" width="240"> | <img src="led_one_by_one.gif" width="240"> | <img src="led_stack.gif" width="240"> |
+
 ## 핵심
 
 - `DDRC = 0xFF`로 PORTC 전체를 출력으로 설정합니다.
